@@ -62,7 +62,7 @@ class All_Orders_State extends State<All_Orders> {
                           filterValue = newValue;
                         });
                       },
-                      items: <String>['TODOS', 'APROVADO', 'REJEITADO', 'EM PREPARAÇÃO', 'EM TRANSPORTE', 'ENTREGUE']
+                      items: <String>['TODOS', 'AGUARDANDO APROVAÇÃO', 'APROVADO', 'REJEITADO', 'EM PREPARAÇÃO', 'EM TRANSPORTE', 'ENTREGUE']
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,

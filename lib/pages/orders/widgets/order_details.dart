@@ -404,6 +404,8 @@ class Order_Details_State extends State<Order_Details> {
                           }
 
                         }
+                        await FirebaseFirestore.instance.collection('orders')
+                            .doc(_infoScreen.order.id).update(edit_order);
 
                         await FirebaseFirestore.instance.collection('users')
                             .doc(_infoScreen.order.data()['uid_user']).collection('orders')
@@ -459,6 +461,9 @@ class Order_Details_State extends State<Order_Details> {
 
                         }
 
+                        await FirebaseFirestore.instance.collection('orders')
+                            .doc(_infoScreen.order.id).update(edit_order);
+
                         await FirebaseFirestore.instance.collection('users')
                             .doc(_infoScreen.order.data()['uid_user']).collection('orders')
                             .doc(_infoScreen.order.id).update(edit_order);
@@ -490,6 +495,9 @@ class Order_Details_State extends State<Order_Details> {
 
                         edit_order['status'] = 2;
                         edit_order['status_text'] = 'EM PREPARAÇÃO';
+
+                        await FirebaseFirestore.instance.collection('orders')
+                            .doc(_infoScreen.order.id).update(edit_order);
 
                         await FirebaseFirestore.instance.collection('users')
                             .doc(_infoScreen.order.data()['uid_user']).collection('orders')
@@ -523,6 +531,9 @@ class Order_Details_State extends State<Order_Details> {
                         edit_order['status'] = 3;
                         edit_order['status_text'] = 'EM TRANSPORTE';
 
+                        await FirebaseFirestore.instance.collection('orders')
+                            .doc(_infoScreen.order.id).update(edit_order);
+
                         await FirebaseFirestore.instance.collection('users')
                             .doc(_infoScreen.order.data()['uid_user']).collection('orders')
                             .doc(_infoScreen.order.id).update(edit_order);
@@ -554,6 +565,9 @@ class Order_Details_State extends State<Order_Details> {
 
                         edit_order['status'] = 4;
                         edit_order['status_text'] = 'ENTREGUE';
+
+                        await FirebaseFirestore.instance.collection('orders')
+                            .doc(_infoScreen.order.id).update(edit_order);
 
                         await FirebaseFirestore.instance.collection('users')
                             .doc(_infoScreen.order.data()['uid_user']).collection('orders')
