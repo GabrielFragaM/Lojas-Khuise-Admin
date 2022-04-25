@@ -383,7 +383,6 @@ class Product_Details_State extends State<Product_Details> with Validator_Text {
                             value_size = valor;
                           });
                         },
-                        keyboardType: TextInputType.number,
                         autofocus: false,
                         validator: validateText,
                         style: TextStyle(
